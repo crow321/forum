@@ -1,6 +1,7 @@
 package com.jump.forum.entity;
 
 import javax.persistence.*;
+import java.util.Date;
 
 /**
  * Created by Administrator on 2017/6/23.
@@ -15,7 +16,7 @@ public class LoginLog extends BaseDomain {
 
     private String ip;
     @Column(name = "login_date_time")
-    private String loginDate;
+    private Date loginDate;
 
     @ManyToOne
     @JoinColumn(name = "user_id")
@@ -37,11 +38,11 @@ public class LoginLog extends BaseDomain {
         this.ip = ip;
     }
 
-    public String getLoginDate() {
+    public Date getLoginDate() {
         return loginDate;
     }
 
-    public void setLoginDate(String loginDate) {
+    public void setLoginDate(Date loginDate) {
         this.loginDate = loginDate;
     }
 

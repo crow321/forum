@@ -8,19 +8,28 @@ import javax.persistence.*;
 @Entity
 @Table(name = "t_user")
 public class User extends BaseDomain {
+    public static final int USER_LOCK = 1;//1表示用户被锁定
+    public static final int USER_UNLOCK = 0;//0 表示用户未被锁定
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "user_id")
     private int userId;
+
     @Column(name = "user_name")
     private String userName;
+    @Column(name = "password")
     private String password;
     @Column(name = "user_type")
     private long userType;
+    @Column(name = "locked")
     private long locked;
+    @Column(name = "credit")
     private int credit;
-    /*private Date lastVisit;
-    private String lastip;
-    private Set manBoards;*/
+    //    private Date lastVisit;
+    @Column(name = "last_ip")
+    private String lastIp;
+//    private Set manBoards;
 
     public int getUserId() {
         return userId;
@@ -92,5 +101,13 @@ public class User extends BaseDomain {
 
     public void setCredit(int credit) {
         this.credit = credit;
+    }
+
+    public String getLastIp() {
+        return lastIp;
+    }
+
+    public void setLastIp(String lastIp) {
+        this.lastIp = lastIp;
     }
 }
