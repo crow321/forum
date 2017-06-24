@@ -1,13 +1,24 @@
 package com.jump.forum.entity;
 
+import javax.persistence.*;
+
 /**
  * Created by Administrator on 2017/6/23.
  */
+@Entity
+@Table(name = "t_board")
 public class Board extends BaseDomain {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "board_id")
     private long boardId;
+    @Column(name = "board_name")
     private String boardName;
+    @Column(name = "board_desc")
     private String boardDesc;
+    @Column(name = "topic_number")
     private int topicNumber;
+    @Column(name = "main_topic")
     private MainPost mainPost;
 
     public long getBoardId() {
@@ -48,5 +59,16 @@ public class Board extends BaseDomain {
 
     public void setMainPost(MainPost mainPost) {
         this.mainPost = mainPost;
+    }
+
+    @Override
+    public String toString() {
+        return "Board{" +
+                "boardId=" + boardId +
+                ", boardName='" + boardName + '\'' +
+                ", boardDesc='" + boardDesc + '\'' +
+                ", topicNumber=" + topicNumber +
+                ", mainPost=" + mainPost +
+                '}';
     }
 }

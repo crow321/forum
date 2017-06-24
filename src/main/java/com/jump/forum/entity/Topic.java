@@ -1,18 +1,34 @@
 package com.jump.forum.entity;
 
+import javax.persistence.*;
 import java.util.Date;
 
 /**
  * Created by Administrator on 2017/6/23.
  */
+@Entity
+@Table(name = "t_topic")
 public class Topic extends BaseDomain {
+    @Id
+    @Column(name = "topic_id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int topicId;
+
+    @Column(name = "topic_title")
     private String topicTitle;
+
+    @Column(name = "create_time")
     private Date createTime;
+
+    @Column(name = "last_post")
     private Date lastPost;
+
     private int views;
     private int replies;
     private int digest;
+
+    @ManyToOne
+    @JoinColumn(name = "user_id")
     private User user;
 
     public int getTopicId() {
@@ -77,5 +93,19 @@ public class Topic extends BaseDomain {
 
     public void setUser(User user) {
         this.user = user;
+    }
+
+    @Override
+    public String toString() {
+        return "Topic{" +
+                "topicId=" + topicId +
+                ", topicTitle='" + topicTitle + '\'' +
+                ", createTime=" + createTime +
+                ", lastPost=" + lastPost +
+                ", views=" + views +
+                ", replies=" + replies +
+                ", digest=" + digest +
+                ", user=" + user +
+                '}';
     }
 }

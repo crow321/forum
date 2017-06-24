@@ -1,12 +1,24 @@
 package com.jump.forum.entity;
 
+import javax.persistence.*;
+
 /**
  * Created by Administrator on 2017/6/23.
  */
+@Entity
+@Table(name = "t_login_log")
 public class LoginLog extends BaseDomain {
+    @Id
+    @Column(name = "login_log_id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int loginLogId;
+
     private String ip;
+    @Column(name = "login_date")
     private String loginDate;
+
+    @ManyToOne
+    @JoinColumn(name = "user_id")
     private User user;
 
     public int getLoginLogId() {
@@ -39,5 +51,15 @@ public class LoginLog extends BaseDomain {
 
     public void setUser(User user) {
         this.user = user;
+    }
+
+    @Override
+    public String toString() {
+        return "LoginLog{" +
+                "loginLogId=" + loginLogId +
+                ", ip='" + ip + '\'' +
+                ", loginDate='" + loginDate + '\'' +
+                ", user=" + user +
+                '}';
     }
 }

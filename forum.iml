@@ -19,6 +19,7 @@
       <configuration>
         <fileset id="fileset" name="Spring Application Context" removed="false">
           <file>file://$MODULE_DIR$/src/main/java/spring-config.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/hibernate.xml</file>
         </fileset>
       </configuration>
     </facet>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <!-- 导入属性配置文件 -->
+    <context:property-placeholder location="classpath:/config/config.properties"/>
+    <!--<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="location" value="classpath:/config/config.properties"/>
+    </bean>-->
+
+    <!-- 配置数据库连接池 -->
+    <bean id="dataSource"
+          class="${jdbc.dataSource}">
+        <description>"spittr 应用数据库"</description>
+        <property name="url" value="${jdbc.url}"/>
+        <property name="driverClassName" value="${jdbc.driverClassName}"/>
+        <property name="username" value="${jdbc.username}"/>
+        <property name="password" value="${jdbc.password}"/>
+    </bean>
+
+    <!-- 配置 sessionFactory -->
+    <bean id="sessionFactory"
+          class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="packagesToScan" value="com.jump.forum.entity"/>
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialect">${hibernate.dialect}</prop>
+                <prop key="hibernate.show_sql">${hibernate.show_sql}</prop>
+                <prop key="hibernate.format_sql">${hibernate.format_sql}</prop>
+                <prop key="hibernate.hbm2ddl.auto">${hibernate.hbm2ddl.auto}</prop>
+            </props>
+        </property>
+    </bean>
+
+    <!-- 配置事务 -->
+    <bean id="transactionManager" class="org.springframework.orm.hibernate5.HibernateTransactionManager">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+
+    <!-- 使用 @transactional 事务注解驱动-->
+    <!--<tx:annotation-driven/>-->
+
+    <!--事务 代理-->
+    <tx:advice id="txAdvice" transaction-manager="transactionManager">
+        <tx:attributes>
+            <tx:method name="insert" propagation="REQUIRED" rollback-for="Exception.class"/>
+            <tx:method name="deleteById" propagation="REQUIRED" rollback-for="Exception.class"/>
+            <tx:method name="*" propagation="SUPPORTS" read-only="true"/>
+
+        </tx:attributes>
+    </tx:advice>
+
+    <!--事务 切面-->
+    <!-- proxy-target-class="true" 使泛型基于类，默认为false,表示基于接口，抛出异常-->
+    <aop:config proxy-target-class="true">
+        <aop:advisor advice-ref="txAdvice"
+                     pointcut="execution(* com.jump.forum.service.*.*(..))"/>
+    </aop:config>
+</beans>
