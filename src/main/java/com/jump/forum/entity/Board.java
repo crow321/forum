@@ -11,12 +11,12 @@ public class Board extends BaseDomain {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "board_id")
-    private long boardId;
+    private int boardId;
     @Column(name = "board_name")
     private String boardName;
     @Column(name = "board_desc")
     private String boardDesc;
-    @Column(name = "topic_number")
+    @Column(name = "topic_num")
     private int topicNumber;
     @Column(name = "main_topic")
     private MainPost mainPost;
@@ -25,7 +25,7 @@ public class Board extends BaseDomain {
         return boardId;
     }
 
-    public void setBoardId(long boardId) {
+    public void setBoardId(int boardId) {
         this.boardId = boardId;
     }
 

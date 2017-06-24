@@ -8,9 +8,7 @@ import org.hibernate.query.Query;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
 
-import java.io.Serializable;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 import java.util.List;
@@ -21,7 +19,6 @@ import java.util.regex.Pattern;
  * 基类Dao
  * Created by Administrator on 2017/6/23.
  */
-@Repository
 public class BaseDaoImpl<T> implements IBaseDao<T> {
     private static final Logger LOGGER = LoggerFactory.getLogger(BaseDaoImpl.class);
 
@@ -80,12 +77,12 @@ public class BaseDaoImpl<T> implements IBaseDao<T> {
     }
 
     @Override
-    public T load(Serializable id) {
+    public T load(int id) {
         return getSession().load(clazz, id);
     }
 
     @Override
-    public T get(Serializable id) {
+    public T get(int id) {
         return getSession().get(clazz, id);
     }
 
@@ -105,6 +102,14 @@ public class BaseDaoImpl<T> implements IBaseDao<T> {
     public boolean remove(T entity) {
         getSession().remove(entity);
         return true;
+    }
+
+    @Override
+    public boolean deleteById(int id) {
+        String hql = "delete " + clazz.getSimpleName() + " where " + clazz.getSimpleName().toLowerCase() + "Id=:id";
+        Query query = getSession().createQuery(hql);
+        query.setParameter("id", id);
+        return query.executeUpdate() == 1;
     }
 
     @Override
@@ -179,7 +184,7 @@ public class BaseDaoImpl<T> implements IBaseDao<T> {
      * @param values
      * @return
      */
-    private Query createQuery(String hql, Object... values) {
+    protected Query createQuery(String hql, Object... values) {
         if (hql == null || hql.equals("")) {
             LOGGER.error("hql查询语句为空...");
             return null;

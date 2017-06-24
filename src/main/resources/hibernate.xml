@@ -35,7 +35,7 @@
                 <prop key="hibernate.dialect">${hibernate.dialect}</prop>
                 <prop key="hibernate.show_sql">${hibernate.show_sql}</prop>
                 <prop key="hibernate.format_sql">${hibernate.format_sql}</prop>
-                <prop key="hibernate.hbm2ddl.auto">${hibernate.hbm2ddl.auto}</prop>
+                <!--<prop key="hibernate.hbm2ddl.auto">${hibernate.hbm2ddl.auto}</prop>-->
             </props>
         </property>
     </bean>
@@ -53,7 +53,7 @@
         <tx:attributes>
             <tx:method name="insert" propagation="REQUIRED" rollback-for="Exception.class"/>
             <tx:method name="deleteById" propagation="REQUIRED" rollback-for="Exception.class"/>
-            <tx:method name="*" propagation="SUPPORTS" read-only="true"/>
+            <tx:method name="*" propagation="REQUIRED" read-only="false"/>
 
         </tx:attributes>
     </tx:advice>
@@ -62,6 +62,6 @@
     <!-- proxy-target-class="true" 使泛型基于类，默认为false,表示基于接口，抛出异常-->
     <aop:config proxy-target-class="true">
         <aop:advisor advice-ref="txAdvice"
-                     pointcut="execution(* com.jump.forum.service.*.*(..))"/>
+                     pointcut="execution(* com.jump.forum.dao.*.*(..))"/>
     </aop:config>
 </beans>

@@ -1,21 +1,18 @@
 package com.jump.forum.entity;
 
-import javax.persistence.*;
-import java.util.Date;
-
 /**
  * Created by Administrator on 2017/6/23.
  */
-@Entity
+/*@Entity
 @Table(name = "t_post")
 //指定 POJO 的映射继承关系，这里是每个类层次结构一张表
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 //定义辨别类型 字符串
 @DiscriminatorColumn(name = "post_type", discriminatorType = DiscriminatorType.STRING)
 //定义辨别该类的值为 1
-@DiscriminatorValue("1")
+@DiscriminatorValue("1")*/
 public class Post extends BaseDomain {
-    @Id
+    /*@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "post_id")
     private int postId;
@@ -115,5 +112,5 @@ public class Post extends BaseDomain {
                 ", user=" + user +
                 ", topic=" + topic +
                 '}';
-    }
+    }*/
 }

@@ -2,7 +2,6 @@ package com.jump.forum.dao;
 
 import com.jump.forum.vo.Page;
 
-import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -11,10 +10,10 @@ import java.util.List;
 public interface IBaseDao<T> {
 
     //根据id加载实例
-    public T load(Serializable id);
+    public T load(int id);
 
     //根据ID获取实例
-    public T get(Serializable id);
+    public T get(int id);
 
     //加载所有实例
     public List<T> loadAll();
@@ -24,6 +23,8 @@ public interface IBaseDao<T> {
 
     //删除
     public boolean remove(T entity);
+
+    public boolean deleteById(int id);
 
     //更新
     public boolean update(T entity);

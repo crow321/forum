@@ -12,7 +12,6 @@ import org.springframework.stereotype.Repository;
 public class BoardDaoImpl extends BaseDaoImpl<Board> implements IBoardDao<Board> {
     protected final String GET_BOARD_NUM = "select count(b.boardId) from Board as b";
 
-
     /**
      * 获取论坛版块数量
      *
