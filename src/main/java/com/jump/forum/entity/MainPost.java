@@ -1,6 +1,7 @@
 package com.jump.forum.entity;
 
 /**
+ * 主题帖子类
  * Created by Administrator on 2017/6/23.
  */
 //@Entity

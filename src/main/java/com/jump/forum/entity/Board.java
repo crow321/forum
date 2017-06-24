@@ -3,6 +3,7 @@ package com.jump.forum.entity;
 import javax.persistence.*;
 
 /**
+ * 论坛版块 POJO类
  * Created by Administrator on 2017/6/23.
  */
 @Entity

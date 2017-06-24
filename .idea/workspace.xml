@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="898a7c82-e46e-4a00-b809-b76fa5a1de71" name="Default" comment="完成BoardDaoImpl的接口测试：&#10;延迟加载方法 异常，分页未测试">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/test/dao/UserDaoImplTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/test/service/UserServiceImplTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/jump/forum/dao/IUserDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/jump/forum/dao/IUserDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/jump/forum/entity/LoginLog.java" afterPath="$PROJECT_DIR$/src/main/java/com/jump/forum/entity/LoginLog.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/jump/forum/entity/User.java" afterPath="$PROJECT_DIR$/src/main/java/com/jump/forum/entity/User.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/jump/forum/dao/impl/UserDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/jump/forum/dao/impl/UserDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/jump/forum/service/impl/UserServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/jump/forum/service/impl/UserServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/hibernate.xml" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.xml" />
+    <list default="true" id="898a7c82-e46e-4a00-b809-b76fa5a1de71" name="Default" comment="userServiceImpl接口代码完成，简单测试通过">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/test/service/ForumServiceImplTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/jump/forum/entity/Board.java" afterPath="$PROJECT_DIR$/src/main/java/com/jump/forum/entity/Board.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/jump/forum/service/impl/ForumServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/jump/forum/service/impl/ForumServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/jump/forum/dao/IPostDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/jump/forum/dao/IPostDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/jump/forum/entity/MainPost.java" afterPath="$PROJECT_DIR$/src/main/java/com/jump/forum/entity/MainPost.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/jump/forum/entity/Post.java" afterPath="$PROJECT_DIR$/src/main/java/com/jump/forum/entity/Post.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/jump/forum/dao/impl/PostDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/jump/forum/dao/impl/PostDaoImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/jump/forum/entity/Topic.java" afterPath="$PROJECT_DIR$/src/main/java/com/jump/forum/entity/Topic.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="forum.iws" />
@@ -37,90 +37,230 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="UserServiceImplTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/test/service/UserServiceImplTest.java">
+      <file leaf-file-name="ForumServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/jump/forum/service/impl/ForumServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1441" max-vertical-offset="1836">
-              <caret line="65" column="23" selection-start-line="65" selection-start-column="23" selection-end-line="65" selection-end-column="23" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1103" max-vertical-offset="3888">
+              <caret line="72" column="16" selection-start-line="72" selection-start-column="16" selection-end-line="72" selection-end-column="16" />
+              <folding>
+                <element signature="e#2201#2202#0" expanded="true" />
+                <element signature="e#2229#2230#0" expanded="true" />
+                <element signature="e#2292#2293#0" expanded="true" />
+                <element signature="e#2320#2321#0" expanded="true" />
+                <element signature="e#2378#2379#0" expanded="true" />
+                <element signature="e#2406#2407#0" expanded="true" />
+                <element signature="e#2471#2472#0" expanded="true" />
+                <element signature="e#2499#2500#0" expanded="true" />
+                <element signature="e#2564#2565#0" expanded="true" />
+                <element signature="e#2592#2593#0" expanded="true" />
+                <element signature="e#2647#2648#0" expanded="true" />
+                <element signature="e#2674#2675#0" expanded="true" />
+                <element signature="e#2761#2762#0" expanded="true" />
+                <element signature="e#2788#2789#0" expanded="true" />
+                <element signature="e#2873#2874#0" expanded="true" />
+                <element signature="e#2900#2901#0" expanded="true" />
+                <element signature="e#2991#2992#0" expanded="true" />
+                <element signature="e#3018#3019#0" expanded="true" />
+                <element signature="e#3078#3079#0" expanded="true" />
+                <element signature="e#3105#3106#0" expanded="true" />
+                <element signature="e#3170#3171#0" expanded="true" />
+                <element signature="e#3197#3198#0" expanded="true" />
+                <element signature="e#3258#3259#0" expanded="true" />
+                <element signature="e#3285#3286#0" expanded="true" />
+                <element signature="e#3367#3368#0" expanded="true" />
+                <element signature="e#3395#3396#0" expanded="true" />
+                <element signature="e#3456#3457#0" expanded="true" />
+                <element signature="e#3484#3485#0" expanded="true" />
+                <element signature="e#3542#3543#0" expanded="true" />
+                <element signature="e#3570#3571#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IPostDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/jump/forum/dao/IPostDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="378">
+              <caret line="6" column="48" selection-start-line="6" selection-start-column="48" selection-end-line="6" selection-end-column="48" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/jump/forum/service/impl/UserServiceImpl.java">
+      <file leaf-file-name="PostDaoImpl.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/jump/forum/dao/impl/PostDaoImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2669" max-vertical-offset="3213">
-              <caret line="105" column="34" selection-start-line="105" selection-start-column="18" selection-end-line="105" selection-end-column="34" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1447#1448#0" expanded="true" />
-                <element signature="e#1505#1506#0" expanded="true" />
-                <element signature="e#1562#1563#0" expanded="true" />
-                <element signature="e#1604#1605#0" expanded="true" />
-                <element signature="e#2497#2498#0" expanded="true" />
-                <element signature="e#2557#2558#0" expanded="true" />
-                <element signature="e#2610#2611#0" expanded="true" />
-                <element signature="e#2650#2651#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoginLog.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/jump/forum/entity/LoginLog.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="334" max-vertical-offset="1512">
-              <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/jump/forum/entity/User.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="729" max-vertical-offset="2565">
-              <caret line="29" column="28" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
-              <folding>
-                <element signature="e#2170#2171#0" expanded="true" />
-                <element signature="e#2199#2200#0" expanded="true" />
-                <element signature="e#2243#2244#0" expanded="true" />
-                <element signature="e#2279#2280#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IUserService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/jump/forum/service/IUserService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="496" max-vertical-offset="864">
-              <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.5816876" vertical-offset="0" max-vertical-offset="648">
+              <caret line="15" column="40" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IUserDao.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/jump/forum/dao/IUserDao.java">
+      <file leaf-file-name="Board.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/jump/forum/entity/Board.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.44293478" vertical-offset="134" max-vertical-offset="540">
-              <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1647">
+              <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ForumServiceImplTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/test/service/ForumServiceImplTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="2862">
+              <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainPost.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/jump/forum/entity/MainPost.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
+              <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Post.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/jump/forum/entity/Post.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="648" max-vertical-offset="3402">
+              <caret line="38" column="7" selection-start-line="38" selection-start-column="7" selection-end-line="38" selection-end-column="7" />
               <folding>
-                <element signature="docComment;method#queryUserByUserName#0;class#IUserDao#0" expanded="false" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#1052#1053#0" expanded="true" />
+                <element signature="e#1081#1082#0" expanded="true" />
+                <element signature="e#1122#1123#0" expanded="true" />
+                <element signature="e#1158#1159#0" expanded="true" />
+                <element signature="e#1189#1190#0" expanded="true" />
+                <element signature="e#1219#1220#0" expanded="true" />
+                <element signature="e#1262#1263#0" expanded="true" />
+                <element signature="e#1300#1301#0" expanded="true" />
+                <element signature="e#1332#1333#0" expanded="true" />
+                <element signature="e#1363#1364#0" expanded="true" />
+                <element signature="e#1408#1409#0" expanded="true" />
+                <element signature="e#1448#1449#0" expanded="true" />
+                <element signature="e#1484#1485#0" expanded="true" />
+                <element signature="e#1516#1517#0" expanded="true" />
+                <element signature="e#1566#1567#0" expanded="true" />
+                <element signature="e#1608#1609#0" expanded="true" />
+                <element signature="e#1643#1644#0" expanded="true" />
+                <element signature="e#1674#1675#0" expanded="true" />
+                <element signature="e#1722#1723#0" expanded="true" />
+                <element signature="e#1762#1763#0" expanded="true" />
+                <element signature="e#1797#1798#0" expanded="true" />
+                <element signature="e#1830#1831#0" expanded="true" />
+                <element signature="e#1880#1881#0" expanded="true" />
+                <element signature="e#1924#1925#0" expanded="true" />
+                <element signature="e#1953#1954#0" expanded="true" />
+                <element signature="e#1980#1981#0" expanded="true" />
+                <element signature="e#2018#2019#0" expanded="true" />
+                <element signature="e#2050#2051#0" expanded="true" />
+                <element signature="e#2081#2082#0" expanded="true" />
+                <element signature="e#2109#2110#0" expanded="true" />
+                <element signature="e#2150#2151#0" expanded="true" />
+                <element signature="e#2184#2185#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserDaoImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/jump/forum/dao/impl/UserDaoImpl.java">
+      <file leaf-file-name="Topic.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/jump/forum/entity/Topic.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="334" max-vertical-offset="810">
-              <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="2492" max-vertical-offset="3051">
+              <caret line="132" column="19" selection-start-line="132" selection-start-column="19" selection-end-line="132" selection-end-column="19" />
+              <folding>
+                <element signature="e#2529#2530#0" expanded="true" />
+                <element signature="e#2559#2560#0" expanded="true" />
+                <element signature="e#2602#2603#0" expanded="true" />
+                <element signature="e#2640#2641#0" expanded="true" />
+                <element signature="e#2677#2678#0" expanded="true" />
+                <element signature="e#2708#2709#0" expanded="true" />
+                <element signature="e#2758#2759#0" expanded="true" />
+                <element signature="e#2798#2799#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JAVA/com.jump.forum.entity" pinned="false" current-in-tab="false">
+        <entry file="uml://JAVA/com.jump.forum.entity">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
+            <state>
+              <ID>JAVA</ID>
+              <OriginalElement>com.jump.forum.entity</OriginalElement>
+              <nodes>
+                <node x="0.0" y="92.0">com.jump.forum.entity.Post</node>
+                <node x="100.5" y="368.0">com.jump.forum.entity.MainPost</node>
+                <node x="307.0" y="126.5">com.jump.forum.entity.Board</node>
+                <node x="1060.0" y="80.5">com.jump.forum.entity.Topic</node>
+                <node x="879.0" y="138.0">com.jump.forum.entity.LoginLog</node>
+                <node x="561.0" y="80.0">com.jump.forum.entity.User</node>
+                <node x="657.5" y="0.0">com.jump.forum.entity.BaseDomain</node>
+              </nodes>
+              <notes />
+              <edges>
+                <edge source="com.jump.forum.entity.Post" target="com.jump.forum.entity.BaseDomain">
+                  <point x="0.0" y="-107.0" />
+                  <point x="143.5" y="50.0" />
+                  <point x="668.0" y="50.0" />
+                  <point x="-42.0" y="15.0" />
+                </edge>
+                <edge source="com.jump.forum.entity.User" target="com.jump.forum.entity.BaseDomain">
+                  <point x="0.0" y="-119.0" />
+                  <point x="0.0" y="15.0" />
+                </edge>
+                <edge source="com.jump.forum.entity.Topic" target="com.jump.forum.entity.BaseDomain">
+                  <point x="0.0" y="-118.5" />
+                  <point x="1213.5" y="50.0" />
+                  <point x="752.0" y="50.0" />
+                  <point x="42.0" y="15.0" />
+                </edge>
+                <edge source="com.jump.forum.entity.LoginLog" target="com.jump.forum.entity.BaseDomain">
+                  <point x="0.0" y="-61.0" />
+                  <point x="959.5" y="60.0" />
+                  <point x="731.0" y="60.0" />
+                  <point x="21.0" y="15.0" />
+                </edge>
+                <edge source="com.jump.forum.entity.MainPost" target="com.jump.forum.entity.Post">
+                  <point x="0.0" y="-15.0" />
+                  <point x="0.0" y="107.0" />
+                </edge>
+                <edge source="com.jump.forum.entity.Board" target="com.jump.forum.entity.BaseDomain">
+                  <point x="0.0" y="-72.5" />
+                  <point x="424.0" y="60.0" />
+                  <point x="689.0" y="60.0" />
+                  <point x="-21.0" y="15.0" />
+                </edge>
+              </edges>
+              <settings layout="Hierarchic Group" zoom="1.0" x="234.0" y="173.5" />
+              <SelectedNodes>
+                <node>com.jump.forum.entity.Topic</node>
+              </SelectedNodes>
+              <Categories>
+                <Category>Properties</Category>
+                <Category>Constructors</Category>
+                <Category>Fields</Category>
+              </Categories>
+              <SCOPE>All</SCOPE>
+              <VISIBILITY>private</VISIBILITY>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TopicDaoImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/jump/forum/dao/impl/TopicDaoImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="185" max-vertical-offset="675">
+              <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -137,35 +277,36 @@
         <option value="$PROJECT_DIR$/src/main/java/com/jump/forum/service/IUserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jump/forum/dao/ILoginLogDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jump/forum/dao/impl/LoginLogDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jump/forum/dao/IPostDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jump/forum/dao/impl/PostDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jump/forum/service/IForumService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jump/forum/service/impl/ForumServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/resources/config/config.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/jump/forum/entity/BaseDomain.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jump/forum/entity/Topic.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jump/forum/dao/ITopicDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jump/forum/dao/impl/TopicDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jump/forum/vo/Page.java" />
         <option value="$PROJECT_DIR$/src/test/java/test/BaseJunit4.java" />
         <option value="$PROJECT_DIR$/src/main/resources/log4j.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jump/forum/entity/MainPost.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jump/forum/entity/Post.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jump/forum/dao/IBaseDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jump/forum/dao/IBoardDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jump/forum/entity/Board.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jump/forum/dao/impl/BoardDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jump/forum/dao/impl/BaseDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/test/java/test/dao/BoardDaoImplTest.java" />
         <option value="$PROJECT_DIR$/src/main/resources/spring-config.xml" />
         <option value="$PROJECT_DIR$/src/test/java/test/dao/UserDaoImplTest.java" />
         <option value="$PROJECT_DIR$/src/main/resources/hibernate.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jump/forum/dao/IUserDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jump/forum/dao/impl/UserDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jump/forum/entity/LoginLog.java" />
         <option value="$PROJECT_DIR$/src/test/java/test/service/UserServiceImplTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jump/forum/entity/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jump/forum/service/impl/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jump/forum/dao/IUserDao.java" />
+        <option value="$PROJECT_DIR$/src/test/java/test/service/ForumServiceImplTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jump/forum/entity/Board.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jump/forum/entity/MainPost.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jump/forum/entity/Post.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jump/forum/entity/Topic.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jump/forum/service/impl/ForumServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jump/forum/dao/IPostDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jump/forum/dao/impl/PostDaoImpl.java" />
       </list>
     </option>
   </component>
@@ -615,39 +756,11 @@
       <recent name="test.BaseJunit4" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
-      <recent name="test.dao" />
       <recent name="test.service" />
+      <recent name="test.dao" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.UserServiceImplTest.testLoginSuccess">
-    <configuration default="false" name="BoardDaoImplTest.testRemove" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="test.dao.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="forum" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="test.dao" />
-      <option name="MAIN_CLASS_NAME" value="test.dao.BoardDaoImplTest" />
-      <option name="METHOD_NAME" value="testRemove" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="JUnit.ForumServiceImplTest.testAddTopic">
     <configuration default="false" name="BoardDaoImplTest.testFind" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -751,6 +864,34 @@
       <option name="PACKAGE_NAME" value="test.service" />
       <option name="MAIN_CLASS_NAME" value="test.service.UserServiceImplTest" />
       <option name="METHOD_NAME" value="testLoginSuccess" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="ForumServiceImplTest.testAddTopic" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="test.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="forum" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="test.service" />
+      <option name="MAIN_CLASS_NAME" value="test.service.ForumServiceImplTest" />
+      <option name="METHOD_NAME" value="testAddTopic" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -1010,19 +1151,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.BoardDaoImplTest.testRemove" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.BoardDaoImplTest.testFind" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.UserServiceImplTest.testRegister" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.UserDaoImplTest.testSave" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.UserServiceImplTest.testLoginSuccess" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.BoardDaoImplTest.testFind" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.UserServiceImplTest.testRegister" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.UserDaoImplTest.testSave" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.UserServiceImplTest.testLoginSuccess" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.ForumServiceImplTest.testAddTopic" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.UserServiceImplTest.testLoginSuccess" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.UserServiceImplTest.testRegister" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.UserDaoImplTest.testSave" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.BoardDaoImplTest.testFind" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.BoardDaoImplTest.testRemove" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.ForumServiceImplTest.testAddTopic" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.UserServiceImplTest.testLoginSuccess" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.UserServiceImplTest.testRegister" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.UserDaoImplTest.testSave" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.BoardDaoImplTest.testFind" />
       </list>
     </recent_temporary>
   </component>
@@ -1043,7 +1184,7 @@
       <updated>1498229654260</updated>
       <workItem from="1498229666438" duration="15165000" />
       <workItem from="1498288128050" duration="2450000" />
-      <workItem from="1498290618293" duration="7464000" />
+      <workItem from="1498290618293" duration="12284000" />
     </task>
     <task id="LOCAL-00001" summary="所有Dao层初步完成，待测试">
       <created>1498284721203</created>
@@ -1063,11 +1204,17 @@
       <option name="project" value="LOCAL" />
       <updated>1498293640783</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="userServiceImpl接口代码完成，简单测试通过">
+      <created>1498298134065</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1498298134065</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25079000" />
+    <option name="totallyTimeSpent" value="29899000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1091,7 +1238,7 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3225256" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.51194537" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.221843" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24886535" sideWeight="0.5015015" order="2" side_tool="true" content_ui="tabs" />
@@ -1156,7 +1303,8 @@
     <MESSAGE value="所有Dao层初步完成，待测试" />
     <MESSAGE value="调整User 类结构" />
     <MESSAGE value="完成BoardDaoImpl的接口测试：&#10;延迟加载方法 异常，分页未测试" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成BoardDaoImpl的接口测试：&#10;延迟加载方法 异常，分页未测试" />
+    <MESSAGE value="userServiceImpl接口代码完成，简单测试通过" />
+    <option name="LAST_COMMIT_MESSAGE" value="userServiceImpl接口代码完成，简单测试通过" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -1171,36 +1319,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jump/forum/entity/Board.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1620">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#658#659#0" expanded="true" />
-            <element signature="e#696#697#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jump/forum/dao/impl/BoardDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="106" max-vertical-offset="756">
-          <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;method#getBoardNum#0;class#BoardDaoImpl#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="675">
-          <caret line="17" column="34" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/test/dao/BoardDaoImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2160">
@@ -1256,6 +1374,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.24236985" vertical-offset="0" max-vertical-offset="557">
           <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1263,63 +1382,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4466912" vertical-offset="0" max-vertical-offset="544">
           <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jump/forum/dao/IPostDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="378">
-          <caret line="5" column="30" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jump/forum/service/IForumService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="712" max-vertical-offset="1431">
-          <caret line="45" column="34" selection-start-line="45" selection-start-column="34" selection-end-line="45" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jump/forum/service/impl/ForumServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="455" max-vertical-offset="3348">
-          <caret line="28" column="14" selection-start-line="28" selection-start-column="14" selection-end-line="28" selection-end-column="14" />
           <folding>
             <element signature="imports" expanded="false" />
-            <element signature="e#1049#1050#0" expanded="false" />
-            <element signature="e#1077#1078#0" expanded="false" />
-            <element signature="e#1142#1143#0" expanded="false" />
-            <element signature="e#1170#1171#0" expanded="false" />
-            <element signature="e#1225#1226#0" expanded="false" />
-            <element signature="e#1253#1254#0" expanded="false" />
-            <element signature="e#1316#1317#0" expanded="false" />
-            <element signature="e#1344#1345#0" expanded="false" />
-            <element signature="e#1402#1403#0" expanded="false" />
-            <element signature="e#1430#1431#0" expanded="false" />
-            <element signature="e#1495#1496#0" expanded="false" />
-            <element signature="e#1523#1524#0" expanded="false" />
-            <element signature="e#1588#1589#0" expanded="false" />
-            <element signature="e#1616#1617#0" expanded="false" />
-            <element signature="e#1671#1672#0" expanded="false" />
-            <element signature="e#1698#1699#0" expanded="false" />
-            <element signature="e#1785#1786#0" expanded="false" />
-            <element signature="e#1812#1813#0" expanded="false" />
-            <element signature="e#1897#1898#0" expanded="false" />
-            <element signature="e#1924#1925#0" expanded="false" />
-            <element signature="e#2015#2016#0" expanded="false" />
-            <element signature="e#2042#2043#0" expanded="false" />
-            <element signature="e#2102#2103#0" expanded="false" />
-            <element signature="e#2129#2130#0" expanded="false" />
-            <element signature="e#2194#2195#0" expanded="false" />
-            <element signature="e#2221#2222#0" expanded="false" />
-            <element signature="e#2282#2283#0" expanded="false" />
-            <element signature="e#2309#2310#0" expanded="false" />
-            <element signature="e#2391#2392#0" expanded="false" />
-            <element signature="e#2419#2420#0" expanded="false" />
-            <element signature="e#2480#2481#0" expanded="false" />
-            <element signature="e#2508#2509#0" expanded="false" />
-            <element signature="e#2566#2567#0" expanded="false" />
-            <element signature="e#2594#2595#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1382,16 +1446,6 @@
             <element signature="e#2426#2427#0" expanded="false" />
             <element signature="e#2476#2477#0" expanded="false" />
             <element signature="e#2520#2521#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jump/forum/entity/Topic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2295">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1494,43 +1548,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jump/forum/dao/impl/TopicDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="918">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding>
-            <element signature="e#435#436#0" expanded="true" />
-            <element signature="e#462#463#0" expanded="true" />
-            <element signature="e#549#550#0" expanded="true" />
-            <element signature="e#576#577#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jump/forum/dao/impl/PostDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
-          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jump/forum/entity/MainPost.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3970588" vertical-offset="0" max-vertical-offset="544">
-          <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jump/forum/entity/Post.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3294">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/spring-config.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
@@ -1579,17 +1596,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jump/forum/entity/Board.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="1674">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding>
-            <element signature="e#658#659#0" expanded="true" />
-            <element signature="e#696#697#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1325" max-vertical-offset="1836">
@@ -1619,7 +1625,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/jump/forum/dao/impl/UserDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="334" max-vertical-offset="810">
+        <state vertical-scroll-proportion="0.8532609" vertical-offset="334" max-vertical-offset="810">
           <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding />
         </state>
@@ -1646,10 +1652,10 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="729" max-vertical-offset="2565">
           <caret line="29" column="28" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
           <folding>
-            <element signature="e#2170#2171#0" expanded="true" />
-            <element signature="e#2199#2200#0" expanded="true" />
-            <element signature="e#2243#2244#0" expanded="true" />
-            <element signature="e#2279#2280#0" expanded="true" />
+            <element signature="e#2174#2175#0" expanded="true" />
+            <element signature="e#2203#2204#0" expanded="true" />
+            <element signature="e#2247#2248#0" expanded="true" />
+            <element signature="e#2283#2284#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1659,7 +1665,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="334" max-vertical-offset="1512">
           <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1684,11 +1690,263 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/jump/forum/dao/IUserDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44293478" vertical-offset="134" max-vertical-offset="540">
-          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+        <state vertical-scroll-proportion="0.6331522" vertical-offset="199" max-vertical-offset="675">
+          <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jump/forum/service/IForumService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1296">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jump/forum/dao/impl/TopicDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="185" max-vertical-offset="675">
+          <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/com.jump.forum">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>com.jump.forum</OriginalElement>
+          <nodes>
+            <node x="154.0" y="225.0">com.jump.forum.dao</node>
+            <node x="0.0" y="225.0">com.jump.forum.web</node>
+            <node x="161.0" y="150.0">com.jump.forum.cons</node>
+            <node x="0.0" y="300.0">com.jump.forum.vo</node>
+            <node x="0.0" y="75.0">com.jump.forum.service</node>
+            <node x="0.0" y="150.0">com.jump.forum.entity</node>
+            <node x="0.0" y="0.0">com.jump.forum.exception</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="com.jump.forum.entity" target="com.jump.forum.entity">
+              <point x="0.0" y="0.0" />
+              <point x="58.0" y="125.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.4571428571428575" x="-39.52941176470577" y="154.70588235294113" />
+          <SelectedNodes>
+            <node>com.jump.forum.entity</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Inner Classes</Category>
+            <Category>Properties</Category>
+            <Category>Methods</Category>
+            <Category>Constructors</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/test/service/ForumServiceImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="2862">
+          <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/com.jump.forum.entity">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>com.jump.forum.entity</OriginalElement>
+          <nodes>
+            <node x="0.0" y="92.0">com.jump.forum.entity.Post</node>
+            <node x="100.5" y="368.0">com.jump.forum.entity.MainPost</node>
+            <node x="307.0" y="126.5">com.jump.forum.entity.Board</node>
+            <node x="1060.0" y="80.5">com.jump.forum.entity.Topic</node>
+            <node x="879.0" y="138.0">com.jump.forum.entity.LoginLog</node>
+            <node x="561.0" y="80.0">com.jump.forum.entity.User</node>
+            <node x="657.5" y="0.0">com.jump.forum.entity.BaseDomain</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="com.jump.forum.entity.Post" target="com.jump.forum.entity.BaseDomain">
+              <point x="0.0" y="-107.0" />
+              <point x="143.5" y="50.0" />
+              <point x="668.0" y="50.0" />
+              <point x="-42.0" y="15.0" />
+            </edge>
+            <edge source="com.jump.forum.entity.User" target="com.jump.forum.entity.BaseDomain">
+              <point x="0.0" y="-119.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="com.jump.forum.entity.Topic" target="com.jump.forum.entity.BaseDomain">
+              <point x="0.0" y="-118.5" />
+              <point x="1213.5" y="50.0" />
+              <point x="752.0" y="50.0" />
+              <point x="42.0" y="15.0" />
+            </edge>
+            <edge source="com.jump.forum.entity.LoginLog" target="com.jump.forum.entity.BaseDomain">
+              <point x="0.0" y="-61.0" />
+              <point x="959.5" y="60.0" />
+              <point x="731.0" y="60.0" />
+              <point x="21.0" y="15.0" />
+            </edge>
+            <edge source="com.jump.forum.entity.MainPost" target="com.jump.forum.entity.Post">
+              <point x="0.0" y="-15.0" />
+              <point x="0.0" y="107.0" />
+            </edge>
+            <edge source="com.jump.forum.entity.Board" target="com.jump.forum.entity.BaseDomain">
+              <point x="0.0" y="-72.5" />
+              <point x="424.0" y="60.0" />
+              <point x="689.0" y="60.0" />
+              <point x="-21.0" y="15.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.0" x="234.0" y="173.5" />
+          <SelectedNodes>
+            <node>com.jump.forum.entity.Topic</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Properties</Category>
+            <Category>Constructors</Category>
+            <Category>Fields</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jump/forum/entity/Board.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1647">
+          <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jump/forum/entity/MainPost.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
+          <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jump/forum/entity/Topic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2492" max-vertical-offset="3051">
+          <caret line="132" column="19" selection-start-line="132" selection-start-column="19" selection-end-line="132" selection-end-column="19" />
           <folding>
-            <element signature="docComment;method#queryUserByUserName#0;class#IUserDao#0" expanded="false" />
+            <element signature="e#2529#2530#0" expanded="true" />
+            <element signature="e#2559#2560#0" expanded="true" />
+            <element signature="e#2602#2603#0" expanded="true" />
+            <element signature="e#2640#2641#0" expanded="true" />
+            <element signature="e#2677#2678#0" expanded="true" />
+            <element signature="e#2708#2709#0" expanded="true" />
+            <element signature="e#2758#2759#0" expanded="true" />
+            <element signature="e#2798#2799#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jump/forum/service/impl/ForumServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1103" max-vertical-offset="3888">
+          <caret line="72" column="16" selection-start-line="72" selection-start-column="16" selection-end-line="72" selection-end-column="16" />
+          <folding>
+            <element signature="e#2201#2202#0" expanded="true" />
+            <element signature="e#2229#2230#0" expanded="true" />
+            <element signature="e#2292#2293#0" expanded="true" />
+            <element signature="e#2320#2321#0" expanded="true" />
+            <element signature="e#2378#2379#0" expanded="true" />
+            <element signature="e#2406#2407#0" expanded="true" />
+            <element signature="e#2471#2472#0" expanded="true" />
+            <element signature="e#2499#2500#0" expanded="true" />
+            <element signature="e#2564#2565#0" expanded="true" />
+            <element signature="e#2592#2593#0" expanded="true" />
+            <element signature="e#2647#2648#0" expanded="true" />
+            <element signature="e#2674#2675#0" expanded="true" />
+            <element signature="e#2761#2762#0" expanded="true" />
+            <element signature="e#2788#2789#0" expanded="true" />
+            <element signature="e#2873#2874#0" expanded="true" />
+            <element signature="e#2900#2901#0" expanded="true" />
+            <element signature="e#2991#2992#0" expanded="true" />
+            <element signature="e#3018#3019#0" expanded="true" />
+            <element signature="e#3078#3079#0" expanded="true" />
+            <element signature="e#3105#3106#0" expanded="true" />
+            <element signature="e#3170#3171#0" expanded="true" />
+            <element signature="e#3197#3198#0" expanded="true" />
+            <element signature="e#3258#3259#0" expanded="true" />
+            <element signature="e#3285#3286#0" expanded="true" />
+            <element signature="e#3367#3368#0" expanded="true" />
+            <element signature="e#3395#3396#0" expanded="true" />
+            <element signature="e#3456#3457#0" expanded="true" />
+            <element signature="e#3484#3485#0" expanded="true" />
+            <element signature="e#3542#3543#0" expanded="true" />
+            <element signature="e#3570#3571#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jump/forum/dao/IPostDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="378">
+          <caret line="6" column="48" selection-start-line="6" selection-start-column="48" selection-end-line="6" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jump/forum/entity/Post.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="648" max-vertical-offset="3402">
+          <caret line="38" column="7" selection-start-line="38" selection-start-column="7" selection-end-line="38" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1052#1053#0" expanded="true" />
+            <element signature="e#1081#1082#0" expanded="true" />
+            <element signature="e#1122#1123#0" expanded="true" />
+            <element signature="e#1158#1159#0" expanded="true" />
+            <element signature="e#1189#1190#0" expanded="true" />
+            <element signature="e#1219#1220#0" expanded="true" />
+            <element signature="e#1262#1263#0" expanded="true" />
+            <element signature="e#1300#1301#0" expanded="true" />
+            <element signature="e#1332#1333#0" expanded="true" />
+            <element signature="e#1363#1364#0" expanded="true" />
+            <element signature="e#1408#1409#0" expanded="true" />
+            <element signature="e#1448#1449#0" expanded="true" />
+            <element signature="e#1484#1485#0" expanded="true" />
+            <element signature="e#1516#1517#0" expanded="true" />
+            <element signature="e#1566#1567#0" expanded="true" />
+            <element signature="e#1608#1609#0" expanded="true" />
+            <element signature="e#1643#1644#0" expanded="true" />
+            <element signature="e#1674#1675#0" expanded="true" />
+            <element signature="e#1722#1723#0" expanded="true" />
+            <element signature="e#1762#1763#0" expanded="true" />
+            <element signature="e#1797#1798#0" expanded="true" />
+            <element signature="e#1830#1831#0" expanded="true" />
+            <element signature="e#1880#1881#0" expanded="true" />
+            <element signature="e#1924#1925#0" expanded="true" />
+            <element signature="e#1953#1954#0" expanded="true" />
+            <element signature="e#1980#1981#0" expanded="true" />
+            <element signature="e#2018#2019#0" expanded="true" />
+            <element signature="e#2050#2051#0" expanded="true" />
+            <element signature="e#2081#2082#0" expanded="true" />
+            <element signature="e#2109#2110#0" expanded="true" />
+            <element signature="e#2150#2151#0" expanded="true" />
+            <element signature="e#2184#2185#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jump/forum/dao/impl/PostDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5816876" vertical-offset="0" max-vertical-offset="648">
+          <caret line="15" column="40" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
+          <folding />
         </state>
       </provider>
     </entry>

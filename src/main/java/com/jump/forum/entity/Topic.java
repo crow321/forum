@@ -4,6 +4,8 @@ import javax.persistence.*;
 import java.util.Date;
 
 /**
+ * 论坛主题 POJO类
+ * 一个论坛主题包含一个论坛主题帖子
  * Created by Administrator on 2017/6/23.
  */
 @Entity
@@ -23,9 +25,20 @@ public class Topic extends BaseDomain {
     @Column(name = "last_post")
     private Date lastPost;
 
+    @Column(name = "topic_views")
     private int views;
+
+    @Column(name = "topic_replies")
     private int replies;
+
     private int digest;
+
+    @OneToOne
+    @JoinColumn(name = "main_post_id")
+    private MainPost mainPost;
+
+    @Column(name = "board_id")
+    private int boardId;
 
     @ManyToOne
     @JoinColumn(name = "user_id")
@@ -107,5 +120,21 @@ public class Topic extends BaseDomain {
                 ", digest=" + digest +
                 ", user=" + user +
                 '}';
+    }
+
+    public int getBoardId() {
+        return boardId;
+    }
+
+    public void setBoardId(int boardId) {
+        this.boardId = boardId;
+    }
+
+    public MainPost getMainPost() {
+        return mainPost;
+    }
+
+    public void setMainPost(MainPost mainPost) {
+        this.mainPost = mainPost;
     }
 }
