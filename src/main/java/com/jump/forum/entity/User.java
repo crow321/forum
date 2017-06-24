@@ -1,21 +1,26 @@
 package com.jump.forum.entity;
 
-import java.util.Date;
-import java.util.Set;
+import javax.persistence.*;
 
 /**
  * Created by Administrator on 2017/6/23.
  */
+@Entity
+@Table(name = "t_user")
 public class User extends BaseDomain {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int userId;
+    @Column(name = "user_name")
     private String userName;
     private String password;
+    @Column(name = "user_type")
     private long userType;
     private long locked;
-    private int oredit;
-    private Date lastVisit;
+    private int credit;
+    /*private Date lastVisit;
     private String lastip;
-    private Set manBoards;
+    private Set manBoards;*/
 
     public int getUserId() {
         return userId;
@@ -57,15 +62,7 @@ public class User extends BaseDomain {
         this.locked = locked;
     }
 
-    public int getOredit() {
-        return oredit;
-    }
-
-    public void setOredit(int oredit) {
-        this.oredit = oredit;
-    }
-
-    public Date getLastVisit() {
+    /*public Date getLastVisit() {
         return lastVisit;
     }
 
@@ -87,5 +84,13 @@ public class User extends BaseDomain {
 
     public void setManBoards(Set manBoards) {
         this.manBoards = manBoards;
+    }*/
+
+    public int getCredit() {
+        return credit;
+    }
+
+    public void setCredit(int credit) {
+        this.credit = credit;
     }
 }

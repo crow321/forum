@@ -14,7 +14,7 @@ public class LoginLog extends BaseDomain {
     private int loginLogId;
 
     private String ip;
-    @Column(name = "login_date")
+    @Column(name = "login_date_time")
     private String loginDate;
 
     @ManyToOne
