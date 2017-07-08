@@ -133,16 +133,6 @@ public class BaseDaoImpl<T> implements IBaseDao<T> {
         return query.list();
     }
 
-    @Override
-    public boolean initialize(Object entity) {
-        //todo
-        return false;
-    }
-
-    protected Session getSession() {
-        return sessionFactory.getCurrentSession();
-    }
-
     /**
      * 分页查询
      *
@@ -194,5 +184,15 @@ public class BaseDaoImpl<T> implements IBaseDao<T> {
             query.setParameter(i, values[i]);
         }
         return query;
+    }
+
+    @Override
+    public boolean initialize(Object entity) {
+        //todo
+        return false;
+    }
+
+    protected Session getSession() {
+        return sessionFactory.getCurrentSession();
     }
 }

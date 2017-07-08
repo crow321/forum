@@ -11,28 +11,23 @@ import java.util.Date;
 @Entity
 @Table(name = "t_topic")
 public class Topic extends BaseDomain {
+    //精华帖级别 1,2,3 默认1
+    public static final int DIGEST_TOPIC = 1;
     @Id
     @Column(name = "topic_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int topicId;
-
     @Column(name = "topic_title")
     private String topicTitle;
-
     @Column(name = "create_time")
     private Date createTime;
-
     @Column(name = "last_post")
     private Date lastPost;
-
     @Column(name = "topic_views")
     private int views;
-
     @Column(name = "topic_replies")
     private int replies;
-
     private int digest;
-
     @OneToOne
     @JoinColumn(name = "main_post_id")
     private MainPost mainPost;

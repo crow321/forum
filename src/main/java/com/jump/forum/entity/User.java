@@ -1,6 +1,7 @@
 package com.jump.forum.entity;
 
 import javax.persistence.*;
+import java.util.Set;
 
 /**
  * Created by Administrator on 2017/6/23.
@@ -29,7 +30,7 @@ public class User extends BaseDomain {
     //    private Date lastVisit;
     @Column(name = "last_ip")
     private String lastIp;
-//    private Set manBoards;
+    private Set<Board> manBoards;
 
     public int getUserId() {
         return userId;
@@ -109,5 +110,13 @@ public class User extends BaseDomain {
 
     public void setLastIp(String lastIp) {
         this.lastIp = lastIp;
+    }
+
+    public Set getManBoards() {
+        return manBoards;
+    }
+
+    public void setManBoards(Set manBoards) {
+        this.manBoards = manBoards;
     }
 }

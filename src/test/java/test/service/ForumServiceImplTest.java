@@ -67,7 +67,7 @@ public class ForumServiceImplTest extends BaseJunit4 {
 
     @Test
     public void testGetPagedPosts() throws Exception {
-
+//        forumService.getPagedPosts()
     }
 
     @Test

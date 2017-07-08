@@ -29,7 +29,7 @@ public interface IForumService {
 
     Page getPagedTopics(int boardId, int pageNo, int pageSize);
 
-    Page getPagedPosts(int postId, int pageNo, int pageSize);
+    Page getPagedPosts(int topicId, int pageNo, int pageSize);
 
     Page queryTopicByTitle(String title, int pageNo, int pageSize);
 
