@@ -22,8 +22,8 @@ public class Post extends BaseDomain {
     private int postId;
     @Column(name = "board_id")
     private int boardId;
-    @Column(name = "post_type")
-    private int postType;
+    /* @Column(name = "post_type")
+     private int postType;*/
     @Column(name = "post_title")
     private String postTitle;
     @Column(name = "post_text")
@@ -36,7 +36,7 @@ public class Post extends BaseDomain {
     @JoinColumn(name = "user_id")
     private User user;
 
-    @ManyToOne
+    @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JoinColumn(name = "topic_id")
     private Topic topic;
 
@@ -56,13 +56,13 @@ public class Post extends BaseDomain {
         this.boardId = boardId;
     }
 
-    public int getPostType() {
+    /*public int getPostType() {
         return postType;
     }
 
     public void setPostType(int postType) {
         this.postType = postType;
-    }
+    }*/
 
     public String getPostTitle() {
         return postTitle;
@@ -109,7 +109,6 @@ public class Post extends BaseDomain {
         return "Post{" +
                 "postId=" + postId +
                 ", boardId=" + boardId +
-                ", postType=" + postType +
                 ", postTitle='" + postTitle + '\'' +
                 ", postText='" + postText + '\'' +
                 ", createTime=" + createTime +

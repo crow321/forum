@@ -2,7 +2,7 @@ package test.dao;
 
 import com.jump.forum.dao.impl.BoardDaoImpl;
 import com.jump.forum.entity.Board;
-import com.jump.forum.entity.MainPost;
+import com.jump.forum.entity.User;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import test.BaseJunit4;
@@ -44,12 +44,20 @@ public class BoardDaoImplTest extends BaseJunit4 {
     //1
     @Test
     public void testSave() throws Exception {
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 3; i++) {
             Board board = new Board();
             board.setBoardName("testSave" + i);
             board.setBoardDesc("test");
-            board.setMainPost(new MainPost());
             board.setTopicNumber(i);
+
+            User user = new User();
+            user.setUserName("postUser" + i);
+            board.setUser(user);
+
+          /*  MainPost mainPost = new MainPost();
+            mainPost.setPostTitle("mainPost");
+            board.setMainPost(mainPost);*/
+
             boolean result = boardDao.save(board);
             System.out.println("save Board -->" + result);
         }

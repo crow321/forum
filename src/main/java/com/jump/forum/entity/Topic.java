@@ -28,14 +28,14 @@ public class Topic extends BaseDomain {
     @Column(name = "topic_replies")
     private int replies;
     private int digest;
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL, mappedBy = "topic")
     @JoinColumn(name = "main_post_id")
     private MainPost mainPost;
 
     @Column(name = "board_id")
     private int boardId;
 
-    @ManyToOne
+    @ManyToOne(targetEntity = User.class)
     @JoinColumn(name = "user_id")
     private User user;
 

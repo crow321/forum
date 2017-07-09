@@ -19,8 +19,13 @@ public class Board extends BaseDomain {
     private String boardDesc;
     @Column(name = "topic_num")
     private int topicNumber;
-    @Column(name = "main_topic")
-    private MainPost mainPost;
+    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id")
+    private User user;
+
+   /* @OneToOne(mappedBy = "board")
+    @JoinColumn(name = "main_post_id")
+    private MainPost mainPost;*/
 
     public long getBoardId() {
         return boardId;
@@ -54,13 +59,13 @@ public class Board extends BaseDomain {
         this.topicNumber = topicNumber;
     }
 
-    public MainPost getMainPost() {
+   /* public MainPost getMainPost() {
         return mainPost;
     }
 
     public void setMainPost(MainPost mainPost) {
         this.mainPost = mainPost;
-    }
+    }*/
 
     @Override
     public String toString() {
@@ -69,7 +74,14 @@ public class Board extends BaseDomain {
                 ", boardName='" + boardName + '\'' +
                 ", boardDesc='" + boardDesc + '\'' +
                 ", topicNumber=" + topicNumber +
-                ", mainPost=" + mainPost +
                 '}';
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 }

@@ -30,8 +30,12 @@ public class User extends BaseDomain {
     //    private Date lastVisit;
     @Column(name = "last_ip")
     private String lastIp;
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "user")
     private Set<Board> manBoards;
-
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "user")
+    private Set<Post> postSet;
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "user")
+    private Set<Topic> topicSet;
     public int getUserId() {
         return userId;
     }
@@ -119,4 +123,12 @@ public class User extends BaseDomain {
     public void setManBoards(Set manBoards) {
         this.manBoards = manBoards;
     }
+
+    /*public Set<Post> getPostSet() {
+        return postSet;
+    }
+
+    public void setPostSet(Set<Post> postSet) {
+        this.postSet = postSet;
+    }*/
 }

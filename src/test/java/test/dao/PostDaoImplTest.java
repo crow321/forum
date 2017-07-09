@@ -1,7 +1,9 @@
 package test.dao;
 
 import com.jump.forum.dao.impl.PostDaoImpl;
+import com.jump.forum.dao.impl.UserDaoImpl;
 import com.jump.forum.entity.Post;
+import com.jump.forum.entity.User;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import test.BaseJunit4;
@@ -11,17 +13,19 @@ import java.util.Date;
 public class PostDaoImplTest extends BaseJunit4 {
     @Autowired
     private PostDaoImpl postDao;
+    @Autowired
+    private UserDaoImpl userDao;
 
     @Test
     public void testSave() throws Exception {
         Post post = new Post();
+//        post.setPostId(101);
         post.setCreateTime(new Date());
-        post.setPostId(100);
         post.setBoardId(10);
         post.setPostText("text");
         post.setPostTitle("postTitle");
-        post.setPostType(2);
-
+        User user = userDao.get(11);
+        post.setUser(user);
         boolean result = postDao.save(post);
         System.out.println("savePost: " + result);
     }
